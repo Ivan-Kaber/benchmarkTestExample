@@ -20,23 +20,23 @@ public class BenchmarkRunner {
     private Student student;
     private Method method;
     private MethodHandle methodHandle;
-    private CallSite site;
     private Function<Student, String> lambdaFunction;
 
     @Setup
     public void setup() throws Throwable {
         student = new Student("Alexander", "Biryukov");
+        String name = "name";
 
         //reflection
-        method = Student.class.getDeclaredMethod("name");
+        method = Student.class.getDeclaredMethod(name);
 
         //methodHandles
         MethodHandles.Lookup lookup = MethodHandles.lookup();
         MethodType methodType = MethodType.methodType(String.class);
-        methodHandle = lookup.findVirtual(Student.class, "name", methodType);
+        methodHandle = lookup.findVirtual(Student.class, name, methodType);
 
         //lambdaMetafactory
-        site = LambdaMetafactory.metafactory(
+        CallSite site = LambdaMetafactory.metafactory(
             lookup,
             "apply",
             MethodType.methodType(Function.class),
