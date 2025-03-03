@@ -22,3 +22,4 @@ Options options = new OptionsBuilder()
 | BenchmarkRunner.lambdaMetafactory | avgt | 30 | 0,890 +- 0,003 | ns/op
 | BenchmarkRunner.methodHandles     | avgt | 30 | 3,931 +- 0,009 | ns/op
 | BenchmarkRunner.reflection        | avgt | 30 | 8,553 +- 0,404 | ns/op
+0
