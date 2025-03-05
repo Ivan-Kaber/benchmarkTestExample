@@ -23,3 +23,13 @@ Options options = new OptionsBuilder()
 | BenchmarkRunner.methodHandles     | avgt | 30 | 3,931 +- 0,009 | ns/op
 | BenchmarkRunner.reflection        | avgt | 30 | 8,553 +- 0,404 | ns/op
 0
+00000000000000000000000
+0
+0
+0
+0
+0
+00
+0
+0
+
